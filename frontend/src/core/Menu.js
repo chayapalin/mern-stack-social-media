@@ -8,7 +8,7 @@ const Menu = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-warning">
         <div className="container-fluid">
-          <Link className="navbar-brand">Recipe Sharing</Link>
+          <Link className="navbar-brand" to="/">Recipe Sharing</Link>
 
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
@@ -30,7 +30,9 @@ const Menu = () => {
               {isAuthenticated() && (
                 <React.Fragment>
                   <li className="nav-item">
-                    <Link className="nav-link">{isAuthenticated().user.name}</Link>
+                    <Link className="nav-link" to={`/user/${isAuthenticated().user._id}`}>
+                      {`${isAuthenticated().user.name}'s profile`}
+                    </Link>
                   </li>
                   <li className="nav-item">
                     <span

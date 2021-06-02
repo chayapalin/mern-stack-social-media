@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { signup } from '../auth'
 
-export class Signup extends Component {
+class Signup extends Component {
   constructor() {
     super()
     this.state = {

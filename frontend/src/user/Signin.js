@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router'
 import { signin, authenticate } from '../auth'
 
-export class Signin extends Component {
+class Signin extends Component {
   constructor() {
     super()
     this.state = {
@@ -24,7 +24,7 @@ export class Signin extends Component {
       email: this.state.email,
       password: this.state.password
     }
-    console.log(user);
+
     signin(user).then(data => {
       if (data.error) {
         this.setState({ error: data.error })
