@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router'
+import { Redirect } from 'react-router-dom'
 import { signin, authenticate } from '../auth'
 
 class Signin extends Component {
